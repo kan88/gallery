@@ -26,7 +26,7 @@ export interface StatePhotos {
     photos?: StatePhoto[]
 }
 
-const initialState: StatePhotos | [] = []
+const initialState: StatePhotos[] = []
 
 // Обрабатываем операции в редукторах
 const photosSlice = createSlice({
