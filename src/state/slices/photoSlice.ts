@@ -14,10 +14,24 @@ export const getPhotos = createAsyncThunk(
     }
 );
 
+export interface StatePhoto {
+    albumId: number,
+    id: number,
+    title: string,
+    url: string,
+    thumbnailUrl: string
+}
+
+export interface StatePhotos {
+    photos?: StatePhoto[]
+}
+
+const initialState: StatePhotos | [] = []
+
 // Обрабатываем операции в редукторах
 const photosSlice = createSlice({
     name: "photos",
-    initialState: [],
+    initialState,
     reducers: {
         showState(state) {
             console.log(state)

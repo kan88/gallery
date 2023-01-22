@@ -5,4 +5,6 @@ export const store = configureStore({
     reducer: {
         photos: photosReducer,
     }
-}); 
+});
+
+export type AppDispatch = typeof store.dispatch
