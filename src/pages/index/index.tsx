@@ -13,6 +13,7 @@ export default function Index() {
         dispatch(getPhotos());
     }, [dispatch]);
     const photos = useSelector((state: any) => state.photos)
+    console.log(photos)
     return (
         <div>
             <Nav></Nav>
